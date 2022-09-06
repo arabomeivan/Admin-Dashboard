@@ -1,30 +1,53 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+
+<!--Main container for holding the navbar component and sidebar(Dashboard)-->
+<div class="row flex-nowrap">
+
+
+<!--Side Bar Component-->
+<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+<Sidebar/>
+</div>
+
+<!--Container to hold content and navbar-->
+<div class="col py-3">
+
+<!--Navbar-->
+<Navbar/>
+
+<!--Content-->
+
+<div class="Container content">
+  <!--Router View and default content will be here-->
   <router-view/>
+</div>
+
+</div>
+
+</div>
+
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Sidebar from './components/Sidebar.vue'
+import Navbar from './components/Navbar.vue'
 
-nav {
-  padding: 30px;
-}
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  export default
+  {
+    components:{
+    Sidebar,
+    Navbar
+  }
+  }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+</script>
+
+
+<style scoped>
+.content
+{
+  width: 50%;
+  margin-bottom: 200%;
 }
 </style>
