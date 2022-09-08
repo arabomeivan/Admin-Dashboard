@@ -5,19 +5,22 @@
 
 
 <!--Side Bar Component-->
-<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 sidebar">
+
 <Sidebar/>
+
+
 </div>
 
 <!--Container to hold content and navbar-->
-<div class="col py-3">
+<div class="col py-3 maincontent">
 
 <!--Navbar-->
 <Navbar/>
 
 <!--Content-->
 
-<div class="Container content">
+<div class="container content">
   <!--Router View and default content will be here-->
   <router-view/>
 </div>
@@ -50,4 +53,19 @@ import Navbar from './components/Navbar.vue'
   width: 50%;
   margin-bottom: 200%;
 }
+.sidebar
+{
+width: 260px;
+height: 1064px;
+left: 0px;
+top: 0px;
+
+background: #081A51;
+}
+.maincontent
+{
+  height:500px;
+}
+
+
 </style>
