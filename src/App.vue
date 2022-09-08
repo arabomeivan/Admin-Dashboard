@@ -56,7 +56,7 @@ import Navbar from './components/Navbar.vue'
 .sidebar
 {
 width: 260px;
-height: 1064px;
+height: 700px;
 left: 0px;
 top: 0px;
 
