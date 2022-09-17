@@ -1,33 +1,37 @@
 <template>
 
-<!--Main container for holding the navbar component and sidebar(Dashboard)-->
-<div class="row flex-nowrap">
-
-
-<!--Side Bar Component-->
-<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 sidebar">
-
-<Sidebar/>
-
-
-</div>
-
-<!--Container to hold content and navbar-->
-<div class="col py-3 maincontent">
 
 <!--Navbar-->
 <Navbar/>
 
-<!--Content-->
+<!--Main container for holding the Sidebar component and content-->
+<div class="container-fluid">
+  <div class="row flex-nowrap">
+  
+  <!--Side Bar Component-->
+  <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 sidebar fixed-top">
+  
+  <Sidebar/>
+  </div>
+  
+  <!--Container to hold content and navbar-->
+  <div class="col py-3 maincontent">
+  
+  
+  
+  <!--Content-->
+  
+  <div class="container content">
+    <!--Router View and default content will be here-->
+    <router-view/>
+  </div>
+  
+  </div>
+  
+  </div>
 
-<div class="container content">
-  <!--Router View and default content will be here-->
-  <router-view/>
 </div>
 
-</div>
-
-</div>
 
 </template>
 
