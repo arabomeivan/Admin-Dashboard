@@ -1,37 +1,31 @@
 <template>
 
-
-<!--Navbar-->
+<!--Navbar is outside structure since it is fixed to the top-->
 <Navbar/>
 
-<!--Main container for holding the Sidebar component and content-->
-<div class="container-fluid">
-  <div class="row flex-nowrap">
-  
-  <!--Side Bar Component-->
-  <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 sidebar fixed-top">
-  
-  <Sidebar/>
-  </div>
-  
-  <!--Container to hold content and navbar-->
-  <div class="col py-3 maincontent">
-  
-  
-  
-  <!--Content-->
-  jkjk
-  <div class="container content">
-    <!--Router View and default content will be here-->
-    <router-view/>
-  </div>
-  
-  </div>
-  
+<!--Holding Container for stucture for sidebar and content-->
+<div class="class row groupcontainer">
+
+  <!--Sidebar Container-->
+  <div class="class col-sm-6 sidebarcontainer static-top">
+<Sidebar/>
   </div>
 
+  <!--Main Content-->
+  <div class="class col-sm-6 maincontent">
+
+    <!--content-->
+    <div class="class container contentcontainer">
+        ffjkjkj
+      </div>
+
+  </div>
+
+
+
+
+  <!--End of Group Structure-->
 </div>
-
 
 </template>
 
@@ -40,36 +34,48 @@ import Sidebar from './components/Sidebar.vue'
 import Navbar from './components/Navbar.vue'
 
 
+
   export default
   {
     components:{
     Sidebar,
+    Navbar,
     Navbar
-  }
+}
   }
 
 </script>
 
 
 <style scoped>
-.content
+
+/**main holding container for sturcture of navbar and sidebar */
+/**since the container is a row width is set to 1366px to not exceed mounted app width */
+.groupcontainer
 {
-  width: 50%;
-  margin-bottom: 200%;
+  width: 1348px;
 }
-.sidebar
+
+/**Styling width and height of the sidebar container */
+.sidebarcontainer
 {
+
 width: 260px;
-height: 700px;
-left: 0px;
-top: 0px;
+height: 1064px;
 
 background: #081A51;
 }
+
+/**placing content to be in middle */
 .maincontent
 {
-  height:500px;
+    margin-top: 100px;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-
+.contentcontainer
+{
+  width: 78%;
+}
 </style>

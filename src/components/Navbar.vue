@@ -1,77 +1,37 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-    <div class="container-fluid">
-      <!--Navabar Title-->
-      <a class="navbar-brand" href="#">Dashboard</a>
-
+ <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="#">Hidden brand</a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
       <form class="d-flex">
-        <!--Search button-->
-        <button type="button" class="btn btn-light searchbtn">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-
-        <!--Notificaion Button-->
-        <button type="button" class="btn btn-light notificationbtn">
-          <i class="fa-regular fa-bell"></i>
-        </button>
-
-        <!--profile picture-->
-        <img
-          src="../assets/Profileimg.jpeg"
-          alt="not loading"
-          class="rounded-circle profileimg"
-          width="40px"
-          height="40px" />
-
-
-        <!--profile name-->
-        <div class="row profilename">
-          <div class="col-sm-12">Ivan Arabome</div>
-        </div>
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
-  </nav>
+  </div>
+</nav>
 </template>
 
 
 <style scoped>
-/**Style for search button, notification and profileimage */
-.searchbtn, .notificationbtn {
-  border-radius: 100%;
-  width: 40px;
-  height: 40px;
-  margin: 5px;
-  align-self: center;
+  /**styling navbar */
+.navbar
+{
+  width: 81%;
+  margin-left: 19%;
 }
-
-.shrinkbtn {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  left: 240px;
-  top: 24px;
-}
-
-/**Profile image */
-.profileimg {
-  margin: 5px;
-  align-self: center;
-  
-}
-.profilename {
-  width: auto;
-  height: 20px;
-  margin: 3px;
-  align-self: center;
-}
-.navbar-brand {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 39px;
-  color: #1c1f37;
-}
-
-/**End of styling for navbar components */
 </style>
