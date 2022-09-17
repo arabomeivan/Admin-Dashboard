@@ -4,7 +4,7 @@
                 <div class="row Admindashboard">
                     
                     <div class="col-sm-6 group2">
-                        <img src="../assets/Logo.png" class="img-fluid group2" alt="not loading">
+                        <img src="" class="img-fluid group2" alt="not loading">
                     </div>
 
                         <div class="col-sm-6 dash">
