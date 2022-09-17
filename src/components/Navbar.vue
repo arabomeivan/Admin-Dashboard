@@ -1,5 +1,5 @@
 <template>
- <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+ <nav class="navbar navbar-expand-lg navbar-light bg-white">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -31,7 +31,7 @@
   /**styling navbar */
 .navbar
 {
-  width: 81%;
-  margin-left: 19%;
+  position:fixed;
+  width: 82%;
 }
 </style>

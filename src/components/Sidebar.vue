@@ -2,7 +2,7 @@
 
 <!--SideBar-->
 <div class="class row sidebar">
-    <div class="class col-sm-12 sidebarcontent fixed-top">
+    <div class="class col-sm-12 sidebarcontent">
         
         fghhgghghghh
     </div>

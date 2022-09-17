@@ -1,30 +1,38 @@
 <template>
 
-<!--Navbar is outside structure since it is fixed to the top-->
-<Navbar/>
 
-<!--Holding Container for stucture for sidebar and content-->
-<div class="class row groupcontainer">
-
-  <!--Sidebar Container-->
-  <div class="class col-sm-6 sidebarcontainer static-top">
-<Sidebar/>
+<div class="row groupcontainer">
+    <!--Sidebar Container-->
+  <div class="col-md-6 sidebarcontainer">
+    <Sidebar/>
   </div>
 
-  <!--Main Content-->
-  <div class="class col-sm-6 maincontent">
+<!--Partition holding navbar and content-->
+  <div class="col-md-6 mainpartition">
 
-    <!--content-->
-    <div class="class container contentcontainer">
-        ffjkjkj
+  <!--Navbar-->
+  <Navbar/>
+
+<!--content-->
+<div class="class container maincontent">
+        <p>ffjkjkj</p>
+        <p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p>
+        <p>ffjkjkj</p><p>ffjkjkj</p>
+          <p>ffjkjkj</p>
+          <p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p>
+          <p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p>
+          <p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p>
+          <p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p>
+          <p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p>
+          <p>ffjkjkj</p><p>ffjkjkj</p>
+          <p>ffjkjkj</p>
+          <p>ffjkjkj</p>
+          <p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p>
+          <p>ffjkjkj</p>
+
       </div>
 
-  </div>
-
-
-
-
-  <!--End of Group Structure-->
+</div>
 </div>
 
 </template>
@@ -39,7 +47,6 @@ import Navbar from './components/Navbar.vue'
   {
     components:{
     Sidebar,
-    Navbar,
     Navbar
 }
   }
@@ -49,20 +56,17 @@ import Navbar from './components/Navbar.vue'
 
 <style scoped>
 
-/**main holding container for sturcture of navbar and sidebar */
-/**since the container is a row width is set to 1366px to not exceed mounted app width */
 .groupcontainer
 {
-  width: 1348px;
+  width: 1349px;
 }
 
 /**Styling width and height of the sidebar container */
 .sidebarcontainer
 {
-
+position:fixed;
 width: 260px;
 height: 1064px;
-
 background: #081A51;
 }
 
@@ -74,8 +78,10 @@ background: #081A51;
     margin-left: auto;
     margin-right: auto;
 }
-.contentcontainer
+.mainpartition
 {
-  width: 78%;
+  width: 82%;
+  margin-left: 248px;
 }
+
 </style>
