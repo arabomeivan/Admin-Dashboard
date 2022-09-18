@@ -15,20 +15,7 @@
 
 <!--content-->
 <div class="class container maincontent">
-        <p>ffjkjkj</p>
-        <p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p>
-        <p>ffjkjkj</p><p>ffjkjkj</p>
-          <p>ffjkjkj</p>
-          <p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p>
-          <p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p>
-          <p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p>
-          <p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p>
-          <p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p>
-          <p>ffjkjkj</p><p>ffjkjkj</p>
-          <p>ffjkjkj</p>
-          <p>ffjkjkj</p>
-          <p>ffjkjkj</p><p>ffjkjkj</p><p>ffjkjkj</p>
-          <p>ffjkjkj</p>
+        <router-view/>
 
       </div>
 

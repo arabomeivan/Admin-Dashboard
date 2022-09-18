@@ -1,28 +1,34 @@
 <template>
  <nav class="navbar navbar-expand-lg navbar-light bg-white">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a class="navbar-brand" href="#">Hidden brand</a>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+  <div class="container-fluid" id="navcontent">
+    <!--Left side of content-->
+    Dashboard
+
+
+    <!--Right side of content-->
+      <form class="d-flex rightcontent">
+        <button type="button" class="btn btn-light rounded-circle"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button type="button" class="btn btn-light rounded-circle"><i class="fa-regular fa-bell"></i></button>
+        <img src="../assets/Profileimg.jpeg" alt="can't load profile picture" class="img-fluid rounded-circle" id="profilepicture">
+         
+
+         <!--Profile Name-->
+         <div class="row" id="profilename">
+          <div class="col-md-12">
+            Ivan Arabome
+          </div>
+         </div>
+         
+
+        <div class="dropdown">
+          <img src="../assets/bx_bx-chevron-down.png" alt="can't load dropdown" class="img-fluid" id="dropdownMenuButton1"  data-bs-toggle="dropdown" aria-expanded="false">
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Settings</a></li>
+    <li><a class="dropdown-item" href="#">Log out</a></li>
+  </ul>
+</div>
       </form>
     </div>
-  </div>
 </nav>
 </template>
 
@@ -31,7 +37,75 @@
   /**styling navbar */
 .navbar
 {
+  height: 90px;
   position:fixed;
   width: 82%;
+}
+
+/**Giving dashboard a style */
+#navcontent
+{
+  font-family: 'Gilroy';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 39px;
+/* identical to box height */
+
+
+color: #1C1F37;
+}
+
+#profilepicture
+{
+  margin-left: 16px;
+  width: 40px;
+  height: 40px;
+}
+
+/**search button and notification button */
+.btn
+{
+  margin-left: 16px;
+  width: 40px;
+  height: 40px;
+}
+
+/**proflilename */
+#profilename
+{
+  align-self: center;
+  margin-left: 16px;
+  width: auto;
+  height: 19px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+
+color: #000000;
+}
+
+
+/**Style for dropdown menu */
+.dropdown
+{
+  width:24px;
+  height:24px;
+  margin-left: 16px;
+}
+
+/**drop down icon */
+#dropdownMenuButton1
+{
+  width: 24px;
+  height: 24px;
+}
+/**dropdown menu placing it to display better */
+.dropdown-menu.show
+{
+  margin-top:10px;
+  margin-left: -120px;
 }
 </style>

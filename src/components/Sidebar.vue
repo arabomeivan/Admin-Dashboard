@@ -1,10 +1,25 @@
 <template>
 
-<!--SideBar-->
+<!--SideBar Content container-->
 <div class="class row sidebar">
+
+  <!--Beginnning of Sidebarcontent-->
     <div class="class col-sm-12 sidebarcontent">
-        
-        fghhgghghghh
+
+      <!--Content 1 Logo-->
+        <div class="row logo">
+
+          <div class="col-md-6">
+             <img src="../assets/Logo.png" alt="not loading" class="img-fluid">            
+          </div>
+
+          <div class="col-md-6 dash">
+             Dash
+             </div>
+
+        </div>
+
+        <!--End of Side bar content-->
     </div>
 </div>
 
@@ -13,8 +28,27 @@
 <script></script>
 
 <style scoped>
-.sidebarcontent
+
+
+/***Styling content 1 */
+
+.logo
 {
-  color:white;
+width: 111px;
+height: 40px;
+margin-left: 30px;
+margin-top: 38px;
+}
+
+.dash
+{
+font-family: 'Gilroy';
+font-style: normal;
+font-weight: 800;
+font-size: 24px;
+line-height: 29px;
+
+color: #FFFFFF;
+
 }
 </style>
