@@ -10,7 +10,7 @@
         <div class="row logo">
 
           <div class="col-md-6">
-             <img src="../assets/Logo.png" alt="not loading" class="img-fluid">            
+             <img src="../assets/Group2.jpg" alt="not loading" class="img-fluid">            
           </div>
 
           <div class="col-md-6 dash">
