@@ -199,7 +199,7 @@ width: 204px;
 height: 100px;
 margin-left: auto;
 margin-right: auto;
-margin-top: 0px;
+margin-top: 18px;
 }
 .needhelpbackground
 {
