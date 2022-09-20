@@ -1,10 +1,9 @@
 <template>
     
-
     <!--Component Title-->
     <div class="row component_title">
         <div class="col-md-12">
-          Charts
+          Create User
         </div>
     </div>
 
@@ -18,7 +17,6 @@
 
 <style scoped>
 .component_title{
-
 font-family: 'Gilroy';
 font-style: normal;
 font-weight: 700;

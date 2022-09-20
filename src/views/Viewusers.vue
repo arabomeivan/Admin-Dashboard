@@ -4,10 +4,9 @@
     <!--Component Title-->
     <div class="row component_title">
         <div class="col-md-12">
-          Charts
+          View Users
         </div>
     </div>
-
 </template>
 
 

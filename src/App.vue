@@ -15,8 +15,10 @@
 
 <!--content-->
 <div class="class container maincontent">
+
+  <!--Router View-->
         <router-view/>
-      klfklfmlkl
+
       </div>
 
 </div>
@@ -60,7 +62,7 @@ background: #081A51;
 /**placing content to be in middle */
 .maincontent
 {
-    margin-top: 100px;
+    margin-top: 150px;
     width:80%;
     margin-left: auto;
     margin-right: auto;

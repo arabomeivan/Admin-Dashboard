@@ -33,7 +33,7 @@
 
     <!--Tab for dashboard-->
   <li class="nav-item">
-    <a class="nav-link" href="#"><i class="fa-solid fa-chart-simple"></i>&nbsp;&nbsp;<span id="nav-text">Dashboard</span></a>
+    <router-link to="/charts" class="nav-link"><i class="fa-solid fa-chart-simple"></i>&nbsp;&nbsp;<span id="nav-text">Dashboard</span></router-link>
   </li>
 
 <!--Inbox-->
@@ -55,22 +55,22 @@
 
 <!--add user-->
 <li class="nav-item">
-<a class="nav-link" href="#"><i class="fa-solid fa-user-plus"></i>&nbsp;&nbsp;<span id="nav-text">Create User</span></a>
+  <router-link to="/user" class="nav-link" ><i class="fa-solid fa-user-plus"></i>&nbsp;&nbsp;<span id="nav-text">Create User</span></router-link>
 </li>
 
 <!--add equipment-->
 <li class="nav-item">
-<a class="nav-link" href="#"><i class="fa-solid fa-desktop"></i>&nbsp;&nbsp;<span id="nav-text">Add Equipment</span></a>
+  <router-link to="/equipments" class="nav-link"><i class="fa-solid fa-desktop"></i>&nbsp;&nbsp;<span id="nav-text">Add Equipment</span></router-link>
 </li>
 
 <!--view users-->
 <li class="nav-item">
-<a class="nav-link" href="#"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;<span id="nav-text">View Users</span></a>
+  <router-link to="/view_users" class="nav-link"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;<span id="nav-text">View Users</span></router-link>
 </li>
 
 <!--view inventory-->
 <li class="nav-item">
-<a class="nav-link" href="#"><i class="fa-solid fa-truck-ramp-box"></i>&nbsp;&nbsp;<span id="nav-text">View Inventory</span></a>
+  <router-link to="/inventory" class="nav-link"><i class="fa-solid fa-truck-ramp-box"></i>&nbsp;&nbsp;<span id="nav-text">View Inventory</span></router-link>
 </li>
 </ul>
 

@@ -1,10 +1,10 @@
 <template>
     
 
-    <!--Component Title-->
-    <div class="row component_title">
+   <!--Component Title-->
+   <div class="row component_title">
         <div class="col-md-12">
-          Charts
+          Add Equipments
         </div>
     </div>
 
@@ -17,6 +17,7 @@
 
 
 <style scoped>
+
 .component_title{
 
 font-family: 'Gilroy';
