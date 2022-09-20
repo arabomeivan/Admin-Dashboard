@@ -1,8 +1,19 @@
 <template>
  <nav class="navbar navbar-expand-lg navbar-light bg-white">
   <div class="container-fluid" id="navcontent">
-    <!--Left side of content-->
-    Dashboard
+
+     <!--LEFT SIDE OF THE NAVBAR CONTENT-->
+  
+  <!--Button to shrink Side bar-->
+  <button type="button" class="btn btn-light rounded-circle" id="minimizesidebar"><i class="fa-solid fa-chevron-left"></i></button>
+
+
+    <div class="row navbartitle">
+      <div class="col-md-12">
+        Dashboard
+      </div>
+    </div>
+    
 
 
     <!--Right side of content-->
@@ -35,13 +46,26 @@
 
 <style scoped>
   /**styling navbar */
+
+.navbartitle
+{
+  margin-right: 400px;
+}
 .navbar
 {
   height: 90px;
   position:fixed;
   width: 82%;
 }
+#minimizesidebar
+{
+  margin-left: -40px;
+}
 
+.btn:focus
+{
+  box-shadow: none;
+}
 /**Giving dashboard a style */
 #navcontent
 {
@@ -107,5 +131,33 @@ color: #000000;
 {
   margin-top:10px;
   margin-left: -120px;
+}
+
+
+/**Responsiveness for mobile phones */
+@media screen and (max-width: 480px) 
+{
+  .navbar
+  {
+    width:283px;
+  }
+
+.navbartitle
+{
+  display: none;
+}
+.d-flex
+{
+  margin-left: -10px;
+  margin-top: -10px;
+}
+
+#minimizesidebar{
+    margin-top: -20px;
+}
+#profilename
+{
+  display: none;
+}
 }
 </style>

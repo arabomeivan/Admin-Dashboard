@@ -33,19 +33,19 @@
 
     <!--Tab for dashboard-->
   <li class="nav-item">
-    <a class="nav-link" href="#"><i class="fa-solid fa-chart-simple"></i>&nbsp;&nbsp;Dashboard</a>
+    <a class="nav-link" href="#"><i class="fa-solid fa-chart-simple"></i>&nbsp;&nbsp;<span id="nav-text">Dashboard</span></a>
   </li>
 
 <!--Inbox-->
   <li class="nav-item">
-    <a class="nav-link" href="#"><i class="fa-sharp fa-solid fa-comment"></i>&nbsp;&nbsp;View Requests</a>
+    <a class="nav-link" href="#"><i class="fa-sharp fa-solid fa-comment"></i>&nbsp;&nbsp;<span id="nav-text">View Requests</span></a>
   </li>
 </ul>
 
 <!--Workspace text-->
 <div class="row workspace">
         <div class="col-md-12">
-        Workspace
+        WORKSPACE
         </div>
       </div>
 
@@ -55,22 +55,22 @@
 
 <!--add user-->
 <li class="nav-item">
-<a class="nav-link" href="#"><i class="fa-solid fa-user-plus"></i>&nbsp;&nbsp;Create User</a>
+<a class="nav-link" href="#"><i class="fa-solid fa-user-plus"></i>&nbsp;&nbsp;<span id="nav-text">Create User</span></a>
 </li>
 
 <!--add equipment-->
 <li class="nav-item">
-<a class="nav-link" href="#"><i class="fa-solid fa-desktop"></i>&nbsp;&nbsp;Add Equipment</a>
+<a class="nav-link" href="#"><i class="fa-solid fa-desktop"></i>&nbsp;&nbsp;<span id="nav-text">Add Equipment</span></a>
 </li>
 
 <!--view users-->
 <li class="nav-item">
-<a class="nav-link" href="#"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;View Users</a>
+<a class="nav-link" href="#"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;<span id="nav-text">View Users</span></a>
 </li>
 
 <!--view inventory-->
 <li class="nav-item">
-<a class="nav-link" href="#"><i class="fa-solid fa-truck-ramp-box"></i>&nbsp;&nbsp;View Inventory</a>
+<a class="nav-link" href="#"><i class="fa-solid fa-truck-ramp-box"></i>&nbsp;&nbsp;<span id="nav-text">View Inventory</span></a>
 </li>
 </ul>
 
@@ -170,6 +170,7 @@ font-weight: 400;
 font-size: 18px;
 line-height: 21px;
 
+
 color: #FFFFFF;
 
 }
@@ -236,5 +237,69 @@ background: #1B2B65;
 {
   background: #1B2B65;
   border-radius: 8px;
+}
+
+
+
+
+/**Responsiveness for mobile phones */
+
+@media screen and (max-width: 480px) 
+{
+  .logo
+  {
+    width: 60px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .dash
+  { 
+    margin-left: 3px;
+    font-size: 16px;
+  }
+  .mainmenu, .workspace
+  {
+    width: 70px;
+    font-size: 10px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .workspace
+  {
+    margin-top: 10px;
+  }
+  .nav-tabs
+  {
+    margin-left: 13px;
+  }
+  .nav-item
+  {
+    margin-left: 0px;
+    width:60px;
+  }
+  #nav-text
+  {
+    display: none;
+  }
+
+  .help
+  {
+    width: 80px ;
+    margin-left: 3px;
+  }
+  .help-circle-background
+  {
+    width: 52px;
+    margin-left: 13px;
+    height: 50px;
+  }
+  .gotohelp
+  {
+    width: 66px;
+    height: 34px;
+    margin-left: -5px;
+    font-size: 8px;
+    margin-top: 20px;
+  }
 }
 </style>

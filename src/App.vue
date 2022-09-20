@@ -16,7 +16,7 @@
 <!--content-->
 <div class="class container maincontent">
         <router-view/>
-
+      klfklfmlkl
       </div>
 
 </div>
@@ -71,4 +71,29 @@ background: #081A51;
   margin-left: 248px;
 }
 
+/**Responsiveness for mobile phones */
+
+@media screen and (max-width: 480px) 
+{
+  .sidebarcontainer
+  {
+    width: 100px;
+  }
+
+  .groupcontainer
+  {
+    width: 330px;
+  }
+  .mainpartition
+  {
+    margin-left: 88px;
+    width: 244px;
+  }
+  .maincontent
+  {
+    margin-top: 120px;
+    width: 50%;
+    margin-left: 52px;
+  }
+}
 </style>
