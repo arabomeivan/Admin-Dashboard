@@ -10,7 +10,7 @@
 
     <div class="row navbartitle">
       <div class="col-md-12">
-        Dashboard
+        {{this.$store.state.navbar.title}}
       </div>
     </div>
     
@@ -43,6 +43,21 @@
 </nav>
 </template>
 
+
+
+
+/**Script tag */
+<script>
+
+
+export default
+{
+   props:['navbartitle']
+   
+}
+
+
+</script>
 
 <style scoped>
   /**styling navbar */

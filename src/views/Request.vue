@@ -4,7 +4,7 @@
     <!--Component Title-->
     <div class="row component_title">
         <div class="col-md-12">
-          View Requests
+          
         </div>
     </div>
 

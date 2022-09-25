@@ -4,7 +4,7 @@
 <div class="row groupcontainer">
     <!--Sidebar Container-->
   <div class="col-md-6 sidebarcontainer">
-    <Sidebar/>
+    <Sidebar :navbartitle="navbartitle" />
   </div>
 
 <!--Partition holding navbar and content-->
@@ -38,6 +38,7 @@ import Navbar from './components/Navbar.vue'
     Sidebar,
     Navbar
 }
+
   }
 
 </script>
