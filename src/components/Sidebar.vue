@@ -33,7 +33,7 @@
 
     <!--Tab for dashboard-->
   <li class="nav-item">
-    <router-link to="/charts" class="nav-link active"><i class="fa-solid fa-chart-simple"></i>&nbsp;&nbsp;<span id="nav-text">Dashboard</span></router-link>
+    <router-link to="/charts" class="nav-link"><i class="fa-solid fa-chart-simple"></i>&nbsp;&nbsp;<span id="nav-text">Dashboard</span></router-link>
   </li>
 
 <!--Inbox-->
