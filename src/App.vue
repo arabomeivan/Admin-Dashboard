@@ -4,7 +4,7 @@
 <div class="row groupcontainer">
     <!--Sidebar Container-->
   <div class="col-md-6 sidebarcontainer">
-    <Sidebar :navbartitle="navbartitle" />
+    <Sidebar />
   </div>
 
 <!--Partition holding navbar and content-->

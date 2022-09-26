@@ -10,7 +10,7 @@
 
     <div class="row navbartitle">
       <div class="col-md-12">
-        {{this.$store.state.navbar.title}}
+        {{ pageName }}
       </div>
     </div>
     
@@ -52,7 +52,37 @@
 
 export default
 {
-   props:['navbartitle']
+  data() {
+    return {
+     
+    }
+  },
+  computed: {
+    
+    pageName() {
+      if (this.$route.path == '/user') {
+        return 'Create User';
+      }
+      if (this.$route.path == '/charts') {
+        return 'Dashboard';
+      }
+      if (this.$route.path == '/inventory') {
+        return 'View Inventory';
+      }
+      if (this.$route.path == '/request') {
+        return 'View Requests';
+      }
+      if (this.$route.path == '/view_users') {
+        return 'View Users';
+      }
+      if (this.$route.path == '/equipments') {
+        return 'View Equipments';
+      }
+
+     
+      return '';
+    }
+  }
    
 }
 
@@ -84,7 +114,7 @@ export default
 /**Giving dashboard a style */
 #navcontent
 {
-  font-family: 'Gilroy';
+  font-family: 'Roboto';
 font-style: normal;
 font-weight: 700;
 font-size: 32px;
@@ -117,7 +147,7 @@ color: #1C1F37;
   margin-left: 16px;
   width: auto;
   height: 19px;
-  font-family: 'Inter';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;

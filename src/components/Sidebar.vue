@@ -32,12 +32,12 @@
   <ul class="nav nav-tabs flex-column">
 
     <!--Tab for dashboard-->
-  <li class="nav-item" @click="this.$store.state.navbar.title ='Dashboard' ">
-    <router-link to="/charts" class="nav-link"><i class="fa-solid fa-chart-simple"></i>&nbsp;&nbsp;<span id="nav-text">Dashboard</span></router-link>
+  <li class="nav-item">
+    <router-link to="/charts" class="nav-link active"><i class="fa-solid fa-chart-simple"></i>&nbsp;&nbsp;<span id="nav-text">Dashboard</span></router-link>
   </li>
 
 <!--Inbox-->
-  <li class="nav-item" @click="this.$store.state.navbar.title ='View Requests' ">
+  <li class="nav-item">
     <router-link to="/request" class="nav-link"><i class="fa-sharp fa-solid fa-comment"></i>&nbsp;&nbsp;<span id="nav-text">View Requests</span></router-link>
   </li>
 </ul>
@@ -54,22 +54,22 @@
 <ul class="nav nav-tabs flex-column">
 
 <!--add user-->
-<li class="nav-item"   @click=" this.$store.state.navbar.title = 'Create User' ">
+<li class="nav-item">
   <router-link to="/user" class="nav-link" ><i class="fa-solid fa-user-plus"></i>&nbsp;&nbsp;<span id="nav-text">Create User</span></router-link>
 </li>
 
 <!--add equipment-->
-<li class="nav-item" @click=" this.$store.state.navbar.title = 'Add Equipment' ">
+<li class="nav-item">
   <router-link to="/equipments" class="nav-link"><i class="fa-solid fa-desktop"></i>&nbsp;&nbsp;<span id="nav-text">Add Equipment</span></router-link>
 </li>
 
 <!--view users-->
-<li class="nav-item" @click=" this.$store.state.navbar.title = 'View Users' ">
+<li class="nav-item">
   <router-link to="/view_users" class="nav-link"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;<span id="nav-text">View Users</span></router-link>
 </li>
 
 <!--view inventory-->
-<li class="nav-item" @click=" this.$store.state.navbar.title = 'View Inventory' ">
+<li class="nav-item">
   <router-link to="/inventory" class="nav-link"><i class="fa-solid fa-truck-ramp-box"></i>&nbsp;&nbsp;<span id="nav-text">View Inventory</span></router-link>
 </li>
 </ul>
@@ -105,7 +105,7 @@
 
 export default
 {
-   props:[ 'navbartitle']
+  
 
    
 }
@@ -126,7 +126,7 @@ margin-top: 38px;
 
 .dash
 {
-font-family: 'Gilroy';
+font-family: 'Roboto';
 font-style: normal;
 font-weight: 800;
 font-size: 24px;
@@ -143,7 +143,7 @@ height: auto;
 margin-left: 30px;
 margin-top: 61px;
 
-font-family: 'Gilroy';
+font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
 font-size: 12px;
@@ -159,7 +159,7 @@ height: auto;
 margin-left: 30px;
 margin-top: 32px;
 
-font-family: 'Gilroy';
+font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
 font-size: 12px;
@@ -172,7 +172,7 @@ color: #51CBFF;
   width: 200px;
   height: 56px;
   margin-left: 20px;
-  font-family: 'Gilroy';
+  font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
 font-size: 18px;
