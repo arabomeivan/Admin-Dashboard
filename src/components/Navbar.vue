@@ -114,7 +114,7 @@ export default
 /**Giving dashboard a style */
 #navcontent
 {
-  font-family: 'Roboto';
+  font-family: 'Montserrat', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 32px;
@@ -147,7 +147,7 @@ color: #1C1F37;
   margin-left: 16px;
   width: auto;
   height: 19px;
-  font-family: 'Roboto';
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;

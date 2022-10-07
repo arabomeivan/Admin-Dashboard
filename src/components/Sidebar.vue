@@ -126,7 +126,7 @@ margin-top: 38px;
 
 .dash
 {
-font-family: 'Roboto';
+font-family: 'Roboto', sans-serif;
 font-style: normal;
 font-weight: 800;
 font-size: 24px;
@@ -159,7 +159,7 @@ height: auto;
 margin-left: 30px;
 margin-top: 32px;
 
-font-family: 'Roboto';
+font-family: 'Roboto', sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 12px;
@@ -172,7 +172,7 @@ color: #51CBFF;
   width: 200px;
   height: 56px;
   margin-left: 20px;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 18px;

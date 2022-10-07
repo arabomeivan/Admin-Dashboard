@@ -53,7 +53,7 @@
 
 .component_title{
 
-font-family: 'Gilroy';
+font-family: 'Roboto', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 32px;

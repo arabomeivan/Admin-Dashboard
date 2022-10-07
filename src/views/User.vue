@@ -1,31 +1,31 @@
 <template>
     
     <!--Component Title-->
-    <div class="row component_title">
+    <div class="row" id="add_userform">
         <div class="col-md-12">
           
 <!--Form to validate fields-->
-<form action="">
+<form action="" class="row g-3">
 
 
-  <div class="mb-3">
+  <div class="col-md-6">
   <label for="exampleFormControlInput1" class="form-label">First Name</label>
   <input type="text" class="form-control" id="firstname" placeholder="First Name">
 </div>
 
-<div class="mb-3">
+<div class="col-md-6">
   <label for="exampleFormControlInput1" class="form-label">Last Name</label>
   <input type="text" class="form-control" id="lastname" placeholder="Last Name">
 </div>
 
-<div class="mb-3">
+<div class="col-md-6">
   <label for="exampleFormControlInput1" class="form-label">Email Addres</label>
   <input type="email" class="form-control" id="email" placeholder="Email Address">
 </div>
 
-<div class="mb-3">
+<div class="col-md-6">
   <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
-  <input type="email" class="form-control" id="phonenumber" placeholder="Phone Number">
+  <input type="text" class="form-control" id="phonenumber" placeholder="Phone Number">
 </div>
 
 <div class=" mb-3">
@@ -50,6 +50,10 @@
        
         </div>
 
+        <div class="col-12">
+    <button type="submit" class="btn btn-primary" id="add_user">Add User</button>
+  </div>
+
 </form>
         </div>
     </div>
@@ -63,14 +67,34 @@
 
 
 <style scoped>
-.component_title{
-font-family: 'Gilroy';
+#add_userform{
+width:70%;
+margin-left: auto;
+margin-right:auto;
+
+
+font-family: 'Roboto', sans-serif;
 font-style: normal;
 font-weight: 700;
-font-size: 32px;
+font-size: 22px;
 line-height: 39px;
 }
 
-
+.form-control
+{
+  width:60%;
+  border-color:  #1C1F37;
+}
+.form-select
+{
+  width:65%;
+  border-color:  #1C1F37;
+}
+#add_user
+{
+   background-color: #1C1F37;
+   border-color: #1C1F37;
+   box-shadow: none;
+}
 
 </style>
