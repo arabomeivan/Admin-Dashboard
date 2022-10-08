@@ -24,7 +24,7 @@
 
 <div class="col-md-6">
   <label for="exampleFormControlInput1" class="form-label">Email Addres</label><span class="mandatory">*</span>
-  <input type="email" class="form-control" id="email" placeholder="Email Address" v-model="email">
+  <input type="text" class="form-control" id="email" placeholder="Email Address" v-model="email">
   <div v-show="emailvisbility" id="errormessage">{{errormessage}}</div>
   
 </div>

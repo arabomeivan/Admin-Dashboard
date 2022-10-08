@@ -18,7 +18,8 @@
 
     <!--Right side of content-->
       <form class="d-flex rightcontent">
-        <button type="button" class="btn btn-light rounded-circle"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <input type="text" class="form-control" id="searchbox" placeholder="Search" v-model="email" v-show="showsearchbox">
+        <button type="button" class="btn btn-light rounded-circle" @click="show_hide_searchbox"><i class="fa-solid fa-magnifying-glass"></i></button>
         <button type="button" class="btn btn-light rounded-circle"><i class="fa-regular fa-bell"></i></button>
         <img src="../assets/Profileimg.jpeg" alt="can't load profile picture" class="img-fluid rounded-circle" id="profilepicture">
          
@@ -54,7 +55,8 @@ export default
 {
   data() {
     return {
-
+       
+      showsearchbox:false,
       navbar_width : this.$store.state.navbar.width
     }
   },
@@ -96,14 +98,16 @@ export default
         
 
         //adjusts the navbar and main partion to fit the whole screen
-        this.$store.state.mainpartition.width = '100%'
-        this.$store.state.mainpartition.margin_left = '2px'
+        this.$store.state.main__partition.width = '100%'
+        this.$store.state.main__partition.margin_left = '2px'
 
         this.navbar_width = '100%'
-        
-        console.log(this.$store.state.mainpartition.width )
-        console.log(this.$store.state.mainpartition.margin_left )
 
+    },
+
+    show_hide_searchbox()
+    {
+      this.showsearchbox = !this.showsearchbox
     }
    }
    
@@ -117,7 +121,7 @@ export default
 
 .navbartitle
 {
-  margin-right: 400px;
+  margin-right: 200px;
 }
 .navbar
 {
@@ -129,7 +133,11 @@ export default
 {
   margin-left: -40px;
 }
-
+#searchbox
+{
+  border-color:  #1C1F37;
+  box-shadow: none;
+}
 .btn:focus
 {
   box-shadow: none;
@@ -168,7 +176,7 @@ color: #1C1F37;
 {
   align-self: center;
   margin-left: 16px;
-  width: auto;
+  width: 70%;
   height: 19px;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
@@ -183,7 +191,7 @@ color: #000000;
 /**Style for dropdown menu */
 .dropdown
 {
-  width:24px;
+  width:44px;
   height:24px;
   margin-left: 16px;
 }
