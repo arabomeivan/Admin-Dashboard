@@ -5,31 +5,39 @@
         <div class="col-md-12">
           
 <!--Form to validate fields-->
-<form action="" class="row g-3">
+<form @submit.prevent="validate" class="row g-3">
 
 
   <div class="col-md-6">
-  <label for="exampleFormControlInput1" class="form-label">First Name</label>
-  <input type="text" class="form-control" id="firstname" placeholder="First Name">
+  <label for="exampleFormControlInput1" class="form-label">First Name</label><span class="mandatory">*</span>
+  <input type="text" class="form-control" id="firstname" placeholder="First Name" v-model="firstname">
+  <div v-show="firstnamevisbility" id="errormessage">{{errormessage}}</div>
+
 </div>
 
 <div class="col-md-6">
-  <label for="exampleFormControlInput1" class="form-label">Last Name</label>
-  <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+  <label for="exampleFormControlInput1" class="form-label">Last Name</label><span class="mandatory">*</span>
+  <input type="text" class="form-control" id="lastname" placeholder="Last Name" v-model="lastname">
+  <div v-show="lastnamevisbility" id="errormessage">{{errormessage}}</div>
+  
 </div>
 
 <div class="col-md-6">
-  <label for="exampleFormControlInput1" class="form-label">Email Addres</label>
-  <input type="email" class="form-control" id="email" placeholder="Email Address">
+  <label for="exampleFormControlInput1" class="form-label">Email Addres</label><span class="mandatory">*</span>
+  <input type="email" class="form-control" id="email" placeholder="Email Address" v-model="email">
+  <div v-show="emailvisbility" id="errormessage">{{errormessage}}</div>
+  
 </div>
 
 <div class="col-md-6">
-  <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
-  <input type="text" class="form-control" id="phonenumber" placeholder="Phone Number">
+  <label for="exampleFormControlInput1" class="form-label">Phone Number</label><span class="mandatory">*</span>
+  <input type="text" class="form-control" id="phonenumber" placeholder="Phone Number" v-model="phone">
+  <div v-show="phonevisbility" id="errormessage">{{errormessage}}</div>
+  
 </div>
 
 <div class=" mb-3">
-  <label for="status">Department</label>
+  <label for="status">Department</label><span class="mandatory">*</span>
         <select class="form-select" aria-label="Default select example" id="department">
                       <option value="Human Resources">Human Resources</option>
                       <option value="Information Technology">Information Technology</option>
@@ -41,7 +49,7 @@
         </div>
 
 <div class=" mb-3">
-  <label for="status">Status</label>
+  <label for="status">Status</label><span class="mandatory">*</span>
         <select class="form-select" aria-label="Default select example" id="status">
                       <option value="Junior Staff ">Junior Staff</option>
                       <option value="Senior Staff">Senior Staff</option>
@@ -51,7 +59,8 @@
         </div>
 
         <div class="col-12">
-    <button type="submit" class="btn btn-primary" id="add_user">Add User</button>
+          
+    <button class="btn btn-primary" id="add_user">Add User</button>
   </div>
 
 </form>
@@ -63,11 +72,90 @@
 
 <script>
 
+export default
+{
+
+  data() {
+    return {
+      firstname:'',
+      lastname:'',
+      email:'',
+      phone:'',
+      firstnamevisbility: false,
+      lastnamevisbility:false,
+      emailvisbility:false,
+      phonevisbility:false,
+      errormessage: 'Field is Compulsory',
+      border_color_firstname: '#1C1F37',
+      border_color_lastname: '#1C1F37',
+      border_color_email: '#1C1F37',
+      border_color_phone: '#1C1F37'
+
+    }
+  },
+
+  methods:
+  {
+    //vaidate if fields are empty
+    validate()
+    {
+      if(this.firstname == '')
+      {
+        this.firstnamevisbility = true
+        this.border_color_firstname = 'red'
+      }
+      else
+      {
+        this.firstnamevisbility =  false
+        this.border_color_firstname = '#1C1F37'
+      }
+
+      if(this.lastname == '')
+      {
+        this.lastnamevisbility = true
+        this.border_color_lastname = 'red'
+      }
+      else
+      {
+        this.lastnamevisbility =  false
+        this.border_color_lastname = '#1C1F37'
+      }
+
+      if(this.email == '')
+      {
+        this.emailvisbility = true
+        this.border_color_email = 'red'
+      }
+      else
+      {
+        this.emailvisbility =  false
+        this.border_color_email = '#1C1F37'
+      }
+
+      if(this.phone == '')
+      {
+        this.phonevisbility = true
+        this.border_color_phone = 'red'
+      }
+      
+      else
+      {
+        this.phonevisbility =  false
+        this.border_color_phone = '#1C1F37'
+      }
+    }
+  }
+
+ 
+
+
+}
 </script>
 
 
 <style scoped>
-#add_userform{
+#add_userform
+{
 width:70%;
 margin-left: auto;
 margin-right:auto;
@@ -80,10 +168,35 @@ font-size: 22px;
 line-height: 39px;
 }
 
-.form-control
+#errormessage
+{
+  font-size: small;
+  color: red;
+}
+.mandatory
+{
+  color: red;
+}
+#firstname
 {
   width:60%;
-  border-color:  #1C1F37;
+  border-color: v-bind(border_color_firstname);
+}
+
+#lastname
+{
+  width:60%;
+  border-color: v-bind(border_color_lastname);
+}
+#email
+{
+  width:60%;
+  border-color: v-bind(border_color_email);
+}
+#phonenumber
+{
+  width:60%;
+  border-color: v-bind(border_color_phone);
 }
 .form-select
 {
