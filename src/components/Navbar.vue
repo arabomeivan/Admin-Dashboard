@@ -5,7 +5,7 @@
      <!--LEFT SIDE OF THE NAVBAR CONTENT-->
   
   <!--Button to shrink Side bar-->
-  <button type="button" class="btn btn-light rounded-circle" id="minimizesidebar"><i class="fa-solid fa-chevron-left"></i></button>
+  <button type="button" class="btn btn-light rounded-circle" id="minimizesidebar" @click="hidesidebar"><i class="fa-solid fa-chevron-left"></i></button>
 
 
     <div class="row navbartitle">
@@ -54,7 +54,8 @@ export default
 {
   data() {
     return {
-     
+
+      navbar_width : this.$store.state.navbar.width
     }
   },
   computed: {
@@ -82,7 +83,29 @@ export default
      
       return '';
     }
-  }
+  },
+   methods:
+   {
+
+    //sidebar visibility is true by default if it is true it becomes false
+    //if it is false it becomes true
+    hidesidebar()
+    {
+      
+        this.$store.state.sidebar.visbility = !this.$store.state.sidebar.visbility
+        
+
+        //adjusts the navbar and main partion to fit the whole screen
+        this.$store.state.mainpartition.width = '100%'
+        this.$store.state.mainpartition.margin_left = '2px'
+
+        this.navbar_width = '100%'
+        
+        console.log(this.$store.state.mainpartition.width )
+        console.log(this.$store.state.mainpartition.margin_left )
+
+    }
+   }
    
 }
 
@@ -100,7 +123,7 @@ export default
 {
   height: 90px;
   position:fixed;
-  width: 82%;
+  width: v-bind(navbar_width);
 }
 #minimizesidebar
 {

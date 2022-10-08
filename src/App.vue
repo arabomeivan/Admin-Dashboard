@@ -3,7 +3,7 @@
 
 <div class="row groupcontainer">
     <!--Sidebar Container-->
-  <div class="col-md-6 sidebarcontainer">
+  <div class="col-md-6 sidebarcontainer" v-show ="this.$store.state.sidebar.visbility">
     <Sidebar />
   </div>
 
@@ -37,6 +37,15 @@ import Navbar from './components/Navbar.vue'
     components:{
     Sidebar,
     Navbar
+},
+
+data()
+{
+  return{
+    width:  this.$store.state.mainpartition.width,
+    margin_left: this.$store.state.mainpartition.margin_left,
+    
+  }
 }
 
   }
@@ -44,7 +53,7 @@ import Navbar from './components/Navbar.vue'
 </script>
 
 
-<style scoped>
+<style>
 
 .groupcontainer
 {
@@ -70,8 +79,8 @@ background: #081A51;
 }
 .mainpartition
 {
-  width: 82%;
-  margin-left: 248px;
+  width: v-bind( width );
+  margin-left: v-bind( margin_left );
 }
 
 /**Responsiveness for mobile phones */

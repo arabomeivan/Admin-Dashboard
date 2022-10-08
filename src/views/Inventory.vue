@@ -34,7 +34,7 @@
     </tr>
   </tbody>
 </table>
-<div v-show="false">I'm visible!</div>
+
         </div>
     </div>
 
