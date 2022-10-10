@@ -41,13 +41,27 @@ import Navbar from './components/Navbar.vue'
 
 data()
 {
-  return{
-    width:  this.$store.state.mainpartition.width,
-    margin_left: this.$store.state.mainpartition.margin_left,
-    
-  }
-}
 
+  
+  // return{
+  //   width:  this.$store.state.mainpartition.width,
+  //   margin_left: this.$store.state.mainpartition.margin_left,
+    
+  // }
+},
+
+computed:
+
+{
+  width() {
+   return this.$store.state.mainpartition.width
+},
+
+margin_left() {
+   return this.$store.state.mainpartition.margin_left
+}
+  
+}
   }
 
 </script>

@@ -5,7 +5,9 @@
      <!--LEFT SIDE OF THE NAVBAR CONTENT-->
   
   <!--Button to shrink Side bar-->
-  <button type="button" class="btn btn-light rounded-circle" id="minimizesidebar" @click="hidesidebar"><i class="fa-solid fa-chevron-left"></i></button>
+  <button type="button" class="btn btn-light rounded-circle" id="minimizesidebar" @click="controlsidebar"><i class="fa-solid fa-chevron-left" v-show="iconvisbility_left"></i>
+    <i class="fa-solid fa-chevron-right" v-show="iconvisbility_right"></i>
+  </button>
 
 
     <div class="row navbartitle">
@@ -57,7 +59,10 @@ export default
     return {
        
       showsearchbox:false,
-      navbar_width : this.$store.state.navbar.width
+      sidebarshown:true,
+      iconvisbility_left: true,
+      iconvisbility_right: false
+
     }
   },
   computed: {
@@ -84,24 +89,57 @@ export default
 
      
       return '';
-    }
+    },
+
+    navbar_width()
+  {
+    return this.$store.state.navbar.width
   },
+  
+  mainpartitionwidth()
+  {
+    return this.$store.state.mainpartition.width
+  },
+
+  mainpartitionmargin()
+  {
+    return this.$store.state.mainpartition.margin_left 
+  }
+  }
+  ,
+
    methods:
    {
 
     //sidebar visibility is true by default if it is true it becomes false
     //if it is false it becomes true
-    hidesidebar()
+    controlsidebar()
     {
       
-        this.$store.state.sidebar.visbility = !this.$store.state.sidebar.visbility
+       
         
-
+          if(this.sidebarshown == true)
+          {
+            
+             this.$store.dispatch("remove_full_width")
+             this.sidebarshown = false
+             this.iconvisbility_left = false
+             this.iconvisbility_right = true
+          }
+          else
+          {
+            this.$store.dispatch("make_full_width")
+            this.sidebarshown = true
+            this.iconvisbility_left = true
+            this.iconvisbility_right = false
+          }
         //adjusts the navbar and main partion to fit the whole screen
-        this.$store.state.main__partition.width = '100%'
-        this.$store.state.main__partition.margin_left = '2px'
+        // this.mainpartitionwidth= '100%'
+        // this.mainpartitionmargin = '2px'
 
-        this.navbar_width = '100%'
+        // this.navbar_width = '1
+
+
 
     },
 
@@ -121,7 +159,7 @@ export default
 
 .navbartitle
 {
-  margin-right: 200px;
+  margin-right: 150px;
 }
 .navbar
 {
