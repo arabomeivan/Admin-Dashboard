@@ -133,13 +133,6 @@ export default
             this.iconvisbility_left = true
             this.iconvisbility_right = false
           }
-        //adjusts the navbar and main partion to fit the whole screen
-        // this.mainpartitionwidth= '100%'
-        // this.mainpartitionmargin = '2px'
-
-        // this.navbar_width = '1
-
-
 
     },
 

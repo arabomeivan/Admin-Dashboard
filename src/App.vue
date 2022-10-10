@@ -118,8 +118,7 @@ background: #081A51;
   .maincontent
   {
     margin-top: 120px;
-    width: 50%;
-    margin-left: 52px;
+    width: 67%;
   }
 }
 </style>

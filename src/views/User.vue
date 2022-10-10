@@ -210,4 +210,32 @@ line-height: 39px;
    box-shadow: none;
 }
 
+/**Responsiveness for mobile phones */
+
+@media screen and (max-width: 480px) 
+{
+
+
+  #add_userform
+{
+font-size: 15px;
+width:auto;
+
+}
+
+#firstname, 
+#lastname, 
+#email,
+#phonenumber
+{
+  width:100%;
+  
+}
+
+.form-select
+{
+  width: 122%;
+}
+}
+
 </style>
